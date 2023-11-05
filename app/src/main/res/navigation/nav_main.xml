@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/entryFragment">
+
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.projectteam8.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry_main" >
+        <action
+            android:id="@+id/action_entryFragment_to_addListFragment"
+            app:destination="@id/addListFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_myAssetFragment"
+            app:destination="@id/myAssetFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_savingPlanListFragment"
+            app:destination="@id/savingPlanListFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addListFragment"
+        android:name="com.example.projectteam8.AddListFragment"
+        android:label="fragment_add_list"
+        tools:layout="@layout/fragment_add_list" >
+        <action
+            android:id="@+id/action_addListFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAssetFragment"
+        android:name="com.example.projectteam8.MyAssetFragment"
+        android:label="fragment_my_asset"
+        tools:layout="@layout/fragment_my_asset_main" >
+        <action
+            android:id="@+id/action_myAssetFragment_to_assetPlanListFragment"
+            app:destination="@id/assetPlanListFragment" />
+        <action
+            android:id="@+id/action_myAssetFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assetPlanListFragment"
+        android:name="com.example.projectteam8.AssetPlanListFragment"
+        android:label="fragment_asset_plan_list"
+        tools:layout="@layout/fragment_asset_plan_list" >
+        <action
+            android:id="@+id/action_assetPlanListFragment_to_setAssetPlanFragment"
+            app:destination="@id/setAssetPlanFragment" />
+        <action
+            android:id="@+id/action_assetPlanListFragment_to_myAssetFragment"
+            app:destination="@id/myAssetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setAssetPlanFragment"
+        android:name="com.example.projectteam8.SetAssetPlanFragment"
+        android:label="fragment_set_asset_plan"
+        tools:layout="@layout/fragment_set_asset_plan" >
+        <action
+            android:id="@+id/action_setAssetPlanFragment_to_assetPlanListFragment"
+            app:destination="@id/assetPlanListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savingPlanListFragment"
+        android:name="com.example.projectteam8.SavingPlanListFragment"
+        android:label="fragment_saving_plan_list"
+        tools:layout="@layout/fragment_saving_plan_list_main" >
+        <action
+            android:id="@+id/action_savingPlanListFragment_to_setSavingPlanFragment"
+            app:destination="@id/setSavingPlanFragment" />
+        <action
+            android:id="@+id/action_savingPlanListFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setSavingPlanFragment"
+        android:name="com.example.projectteam8.setSavingPlanFragment"
+        android:label="fragment_set_saving_plan"
+        tools:layout="@layout/fragment_set_saving_plan" >
+        <action
+            android:id="@+id/action_setSavingPlanFragment_to_savingPlanListFragment"
+            app:destination="@id/savingPlanListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.projectteam8.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings_main" >
+        <action
+            android:id="@+id/action_settingsFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+</navigation>
